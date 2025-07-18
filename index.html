@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OceanGuard Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-o9N1j8Mk8tGdUF+g+vNC3Z7x4DQpUNSh5U+5GkPjckE=" crossorigin=""/>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j8Mk8tGdUF+g+vNC3Z7x4DQpUNSh5U+5GkPjckE=" crossorigin=""></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-left">
+      <span class="header-logo">🌊 OceanGuard</span>
+    </div>
+    <div class="header-right">
+      <label for="languageToggle" class="header-label">🌐</label>
+      <select id="languageToggle" class="header-select">
+        <option value="en">English</option>
+        <option value="ta">தமிழ்</option>
+      </select>
+    </div>
+  </header>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li class="active" onclick="showRadar()"><i class="fas fa-satellite-dish"></i> Radar</li>
+          <li onclick="showSettings()"><i class="fas fa-cogs"></i> Settings</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section class="radar-view section-view active">
+        <section class="top-cards">
+          <div class="card">
+            <h3>Today's Weather</h3>
+            <p>Temperature: Loading...</p>
+          </div>
+          <div class="card">
+            <h3>High Tide Zone</h3>
+            <p id="sos-info"></p>
+          </div>
+          <div class="card">
+            <h3>Fish Spot</h3>
+            <p id="fishspot-info"></p>
+          </div>
+          <div class="card" style="min-width:220px;">
+            <label for="mapdata-csv"><b>Upload SOS & Fish Spot CSV:</b></label>
+            <input type="file" id="mapdata-csv" accept=".csv">
+            <button id="mapdata-upload-btn" style="margin-top:8px;display:block;">Upload</button>
+          </div>
+        </section>
+        <div class="map-container" id="radar-map" style="height: 400px; width: 100%; margin-top: 16px;"></div>
+      </section>
+
+      
+
+      <section class="settings-view section-view">
+        <div class="settings-panel">
+          <h3>Settings</h3>
+          <label>Language:
+            <select id="languageToggle">
+              <option value="en">English</option>
+              <option value="ta">தமிழ்</option>
+            </select>
+          </label>
+          <label>Clock Format:
+            <select id="clockFormat">
+              <option value="24">24-Hour</option>
+              <option value="12">12-Hour</option>
+            </select>
+          </label>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="floating-clock" id="clock">--:--</div>
+</body>
+</html>
