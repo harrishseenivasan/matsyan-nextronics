@@ -97,5 +97,5 @@ OceanGuard/
 
 ## 👤 Developed By
 
-- **Project Author**: Arrow Ash
-- **Use Case**: MSME / Startup Innovation for Coastal Safety
+- **Project Author**: Nextronics
+- **Use Case**: Agentic Hackathon
