@@ -6,6 +6,13 @@ OceanGuard is a smart, offline-capable emergency and weather alert system specif
 
 ---
 
+## 📺 Project Demo Video
+
+Watch the live demonstration of the OceanGuard system in action:  
+👉 [https://youtu.be/8Nfj13R0pLU](https://youtu.be/8Nfj13R0pLU)
+
+---
+
 ## 🚀 Key Features
 
 ### 🛰️ 1. Boat-side Sender Unit
@@ -16,12 +23,16 @@ OceanGuard is a smart, offline-capable emergency and weather alert system specif
   - Operates 24/7 using low-power components.
 
 #### 📡 Message Format:
-```
+
 type,lat,lng
+
 sos,6.9600001,78.8300002
+
 heavytide,6.9649775,77.7814553
+
 fishspot,6.9620382,78.8396941
-```
+
+
 
 ### 🏠 2. Land-side Receiver Unit
 - **Components**: ESP32, LoRa SX1278, laptop or PC
@@ -62,20 +73,28 @@ fishspot,6.9620382,78.8396941
 ---
 
 ## 📂 File Structure (Example)
-```
 OceanGuard/
+
 ├── sender_code/
-│   └── esp32_lora_gps_sender.ino
+
+│ └── esp32_lora_gps_sender.ino
+
 ├── receiver_code/
-│   └── esp32_lora_receiver_to_csv.ino
+
+│ └── esp32_lora_receiver_to_csv.ino
+
 ├── dashboard/
-│   ├── index.html
-│   ├── script.js
-│   └── server.js
+
+│ ├── index.html
+
+│ ├── script.js
+
 ├── data/
-│   └── data.csv
+
+│ └── test.csv
+
 └── README.md
-```
+
 
 ---
 
@@ -97,5 +116,5 @@ OceanGuard/
 
 ## 👤 Developed By
 
-- **Project Author**: Nextronics
+- **Project Author**: Nextronics  
 - **Use Case**: Agentic Hackathon
